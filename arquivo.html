@@ -7,31 +7,46 @@
 </head>
 <body>
     <div id="containerArq">
-        <nav id="navArq"></nav>
+        <nav id="navArq">
+            <a href="index.html">Home</a> |
+            <a href="">Buscar</a> |
+            <a href="">Arquivo</a> |
+            <a href="">Buscar e Substituir</a> |
+            <a href="">Cadastro</a> 
+        </nav>
+        <br>
+
         <header id="headerArq"></header>
+        
         <section id="mainArq">
-        <fieldset id="tipoArq">
-            <legend>Selecione o tipo de arquivo:</legend>
-            <input type="checkbox" id="imagens" name="JPG/JPEG/PNG">
-            <label for="imagens">JPG/JPEG/PNG</label>
-
-            <input type="checkbox" id="doc" name="doc">
-            <label for="doc">DOC</label>
-
-            <input type="checkbox" id="pdf" name="pdf">
-            <label for="pdf">PDF</label>
-
-            <input type="checkbox" id="csv" name="csv">
-            <label for="csv">CSV</label>
-        </fieldset>   
-
+            <fieldset id="tipoArq">
+                <legend>Selecione o tipo de arquivo:</legend>
+                <input type="checkbox" id="imagens" name="JPG/JPEG/PNG">
+                <label for="imagens">JPG/JPEG/PNG</label>
+                <br>
+                <input type="checkbox" id="doc" name="doc">
+                <label for="doc">DOC</label>
+                <br>
+                <input type="checkbox" id="pdf" name="pdf">
+                <label for="pdf">PDF</label>
+                <br>
+                <input type="checkbox" id="csv" name="csv">
+                <label for="csv">CSV</label>
+            </fieldset>   
+            <br>
        <div id="regrasNome">
           <h4>Regras de nomenclatura:</h4>
           <ul>
-            
+            <li>Não utilizar caracteres especiais no nome do arquivo(exceto underscore)</li>
+            <li>Iniciar com letra maiuscula</li>
+            <li>Tamanho inimo de 8 caracteres e máximo de 15 caracteres</li>
           </ul>
-
-       </div>
+        </div>
+        
+       <fieldset>
+            <legend>Arquivo:</legend>
+            <input type="text" id="nomeArq" name="nomeArq">
+       </fieldset>
 
         </section>
         <footer id="footerArq"></footer>
