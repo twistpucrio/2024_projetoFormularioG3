@@ -12,10 +12,21 @@ function verificaCpf(dados){
     return 1;
 }
 
+function limparCadastro(){
+    let nome = document.querySelector("#nome");
+    let cpf = document.querySelector("#cpf");
+
+    alert("oi");
+
+    nome.value = " ";
+    cpf.value = " ";
+}
+
 window.addEventListener("load", function(){
     let btnCadastro = document.querySelector("#btnCadastroSub");
 
     btnCadastro.addEventListener("click", function(){
+        let btnLimpa = document.querySelector("#btnLimpar");
         let nome = document.querySelector("#nome").value;
         let cpf = document.querySelector("#cpf").value;
 
@@ -40,5 +51,7 @@ window.addEventListener("load", function(){
         else {
             alert("Por favor, digite algo!!");
         }
+
+        btnLimpa.addEventListener("click", limparCadastro);
     });
 });
