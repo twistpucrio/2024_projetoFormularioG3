@@ -1,26 +1,38 @@
-//funcoes para fazer no javascript:
-// Não possibilitar preencher o nome do arquivo com caráteres especiais (exceto underscore);
-// Iniciar com letra maiúscula;
-// Deve ter o tamanho mínimo 8 caracteres e máximo 15
-//Os resultados podem ser informados utilizando mensagens de alertas.
+ 
+//funcoes:
 
-//func para limpar o forms
-function limpaForm()
-{
-   
+//limpa:
+
+function limpa() {
+    texto=document.querySelector("#nomeArq").value;
+    texto.value = " ";
 }
 
-function procuraCaracterEsp()
-{
+//verifica:
 
+function valida(){
+  let texto =document.querySelector("#nomeArq").value;
+  let regex =/^[A-Z]/;
+  if(!regex.test(texto))
+  {
+    alert("O nome do arquivo deve iniciar com letra maiuscula");
+  }
+  else
+    alert("Valido");
 }
 
-function verificaMaiuscula()
-{
 
-}
 
-function verificaNumCaracter()
-{
-    
-}
+
+window.addEventListener("load", function(){
+  let btnlimpa = document.querySelector("#btnlimpa");
+  let btnverifica = document.querySelector("#btnVerifica");
+
+  btnlimpa.addEventListener("click", function(){
+    limpa();
+  })
+
+  btnverifica.addEventListener("click", function(){
+    valida();
+  })
+})
