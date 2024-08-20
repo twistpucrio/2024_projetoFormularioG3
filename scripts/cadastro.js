@@ -4,13 +4,41 @@ function verificaNome(dados){
 }
 
 function verificaCpf(dados){
-    let resultado = dados.search(/^\d/);
-    alert(dados.length);
+    let resultado = dados.search(/\D/);
+
     alert(resultado);
-    if (dados.length != 11 || resultado != -1){
+    alert(dados.length);
+    
+    if (dados.length == 11 && resultado == -1){
+        alert("não é possivel");
+        return 1;
+    }
+    return -1;
+}
+
+function verificaDataNasc(){
+
+}
+
+function verificaUsuario(){
+
+}
+
+function verificaEmail(dados){
+
+}
+
+function verificaSenha(dados){
+
+}
+
+function verificaSenhaVer(senha, senhaVer){
+    if (senhaVer==senha){
+        return 1;
+    }
+    else{
         return -1;
     }
-    return 1;
 }
 
 function limparCadastro(){
@@ -51,6 +79,10 @@ window.addEventListener("load", function(){
 
         if (verificaCpf(cpf) == -1){
             resposta += "CPF inválido\n";
+        }
+
+        if (verificaSenhaVer(senhaVer, senha) == -1){
+            resposta += "A senha de verificação tem que ser igual à outra\n";
         }
 
         // if (nome != "" && cpf != "" && senha != "" && senhaVer != "") {
