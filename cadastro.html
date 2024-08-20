@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto 1</title>
 
+    <script src="scripts/cadastro.js"></script>
+
 </head>
 <body>
     <div id="conteudo">
@@ -12,9 +14,9 @@
         <header>Projeto - Formulário e Requisitos</header>
         <nav>
             <a href="index.html">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="">Buscar</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="">Arquivo</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="">Buscar e Substituir</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="busca.html">Buscar</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="arquivo.html">Arquivo</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="buscaesubstitui.html">Buscar e Substituir</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="cadastro.html">Cadastro</a>
         </nav>
         <section>
@@ -24,17 +26,17 @@
                     <legend>Dados Pessoais: </legend>
                     <label for="nome">Nome: </label><input type="text" name="nome" id="nome">
                     <label for="cpf">CPF: </label><input type="text" name="cpf" id="cpf">
-                    <label for="datanasc">Data Nascimento:</label><input type="text" name="datanasc" id="datanasc">
+                    <label for="datanasc">Data Nascimento:</label><input type="date" name="datanasc" id="datanasc">
                 </fieldset>
                 <fieldset>
                     <legend>Dados do Perfil:</legend>
                     <label for="user">Usuário: </label><input type="text" name="user" id="user">
-                    <label for="email">Email: </label><input type="text" name="email" id="email">
-                    <label for="senha">Senha: </label><input type="text" name="senha" id="senha">
-                    <label for="senharver">Verificação Senha: </label><input type="text" name="senharver" id="senharver">
+                    <label for="email">Email: </label><input type="email" name="email" id="email">
+                    <label for="senha">Senha: </label><input type="password" name="senha" id="senha">
+                    <label for="senhaver">Verificação Senha: </label><input type="password" name="senhaver" id="senhaver">
                 </fieldset>
-                <button type="button">Limpar</button>
-                <button type="button">Submeter</button>
+                <button type="button" id="btnLimpar">Limpar</button>
+                <button type="button" id="btnCadastroSub">Submeter</button>
             </form>
 
         </section>
