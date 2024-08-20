@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Formulario</title>
+    <script src="arquivo.js"></script>
 </head>
 <body>
     <div id="containerArq">
@@ -39,16 +40,17 @@
           <ul>
             <li>Não utilizar caracteres especiais no nome do arquivo(exceto underscore)</li>
             <li>Iniciar com letra maiuscula</li>
-            <li>Tamanho inimo de 8 caracteres e máximo de 15 caracteres</li>
+            <li>Tamanho minimo de 8 caracteres e máximo de 15 caracteres</li>
           </ul>
         </div>
+        
         <h4>Arquivo:</h4>
        <form>
             <input type="text" id="nomeArq" name="nomeArq">
-            <button>...</button>
+            <input type ="button" value="..." id="btnVerifica">
             <br><br>
-            <button>Limpar</button>
-            <button>Submeter</button>
+            <button id="btnlimpa">Limpar</button>
+            <input type="button" value="submeter" id="submete"
        </form>
 
         </section>
