@@ -1,12 +1,13 @@
 function verificaNome(dados){
-    let resultado = dados.search(/[a-z]/ || /[A-Z]/);
+    let resultado = dados.search(/\d/);
     return resultado;
 }
 
 function verificaCpf(dados){
-    let resultado = dados.search(/\d/);
-
-    if (dados.length != 11 || resultado == -1){
+    let resultado = dados.search(/^\d/);
+    alert(dados.length);
+    alert(resultado);
+    if (dados.length != 11 || resultado != -1){
         return -1;
     }
     return 1;
@@ -15,43 +16,52 @@ function verificaCpf(dados){
 function limparCadastro(){
     let nome = document.querySelector("#nome");
     let cpf = document.querySelector("#cpf");
+    let dataNasc = document.querySelector("#datanasc");
+    let user = document.querySelector("#user");
+    let email = document.querySelector("#email");
+    let senha = document.querySelector("#senha");
+    let senhaVer = document.querySelector("#senhaver");
 
-    alert("oi");
-
-    nome.value = " ";
-    cpf.value = " ";
+    nome.value = "";
+    cpf.value = "";
+    dataNasc.value = "";
+    user.value = "";
+    email.value = "";
+    senha.value = "";
+    senhaVer.value = "";
 }
 
 window.addEventListener("load", function(){
     let btnCadastro = document.querySelector("#btnCadastroSub");
+    let btnLimpa = document.querySelector("#btnLimpar");
 
     btnCadastro.addEventListener("click", function(){
-        let btnLimpa = document.querySelector("#btnLimpar");
+        let resposta = "";
         let nome = document.querySelector("#nome").value;
         let cpf = document.querySelector("#cpf").value;
-
+        let dataNasc = document.querySelector("#datanasc").value;
+        let user = document.querySelector("#user").value;
+        let email = document.querySelector("#email").value;
         let senha = document.querySelector("#senha").value;
         let senhaVer = document.querySelector("#senhaver").value;
 
-        if (nome != "" && cpf != "" && senha != "" && senhaVer != "") {
-            let respNome = verificaNome(nome);
-
-            if (respNome == -1){
-                alert("Por favor, digite somente letras no campo do nome!");
-            }
-
-            let respCpf = verificaCpf(cpf);
-
-            if (respCpf == -1){
-                alert("Por favor, digite somente 11 dígitos numéricos!");
-            }
-
-
-        }
-        else {
-            alert("Por favor, digite algo!!");
+        if (verificaNome(nome) != -1){
+            resposta += "Nome inválido\n";
         }
 
-        btnLimpa.addEventListener("click", limparCadastro);
+        if (verificaCpf(cpf) == -1){
+            resposta += "CPF inválido\n";
+        }
+
+        // if (nome != "" && cpf != "" && senha != "" && senhaVer != "") {
+
+        // }
+        // else {
+        //     resposta += "Por favor, digite tudo!";
+        // }
+        
+        alert(resposta);
     });
+
+    btnLimpa.addEventListener("click", limparCadastro);
 });
