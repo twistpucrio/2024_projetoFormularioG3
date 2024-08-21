@@ -16,9 +16,14 @@ function verificaCpf(dados){
     return -1;
 }
 
-function verificaDataNasc(){
-
-
+function verificaDataNasc(dataNasc){
+    //
+    padrao= /[0-9]/;
+    let dataVetor = dataNasc.split('-');
+    let ano = dataVetor[0];
+    let tamAno = ano.length;
+    return (tamAno==4);
+    
 }
 
 function verificaUsuario(user){
@@ -76,6 +81,7 @@ window.addEventListener("load", function(){
         let email = document.querySelector("#email").value;
         let senha = document.querySelector("#senha").value;
         let senhaVer = document.querySelector("#senhaver").value;
+       
 
         if (verificaNome(nome) != -1){
             resposta += "Nome inválido\n";
@@ -95,6 +101,10 @@ window.addEventListener("load", function(){
         if(!verificaEmail(email)){
             resposta += "Email invalido\n"
         }
+        if(!verificaDataNasc(dataNasc))
+        {
+            resposta +="Data de nascimento invalida\n";
+        }
 
         // if (nome != "" && cpf != "" && senha != "" && senhaVer != "") {
 
@@ -104,7 +114,6 @@ window.addEventListener("load", function(){
         // }
         
         alert(resposta);
-        alert(dataNasc);
     });
 
     btnLimpa.addEventListener("click", limparCadastro);
