@@ -18,13 +18,17 @@ function verificaCpf(dados){
 
 function verificaDataNasc(){
 
-}
-
-function verificaUsuario(){
 
 }
 
-function verificaEmail(dados){
+function verificaUsuario(user){
+    const padrao= /^[a-z][a-z0-9._]*$/;
+    return padrao.test(user);
+}
+
+function verificaEmail(email){
+    const padrao = /^[a-z._]+@[a-z._]+$/;
+    return padrao.test(email);
 
 }
 
@@ -84,6 +88,13 @@ window.addEventListener("load", function(){
         if (verificaSenhaVer(senhaVer, senha) == -1){
             resposta += "A senha de verificação tem que ser igual à outra\n";
         }
+        if(!verificaUsuario(user)){
+            resposta += "Usuário invalido\n";
+        }
+
+        if(!verificaEmail(email)){
+            resposta += "Email invalido\n"
+        }
 
         // if (nome != "" && cpf != "" && senha != "" && senhaVer != "") {
 
@@ -93,6 +104,7 @@ window.addEventListener("load", function(){
         // }
         
         alert(resposta);
+        alert(dataNasc);
     });
 
     btnLimpa.addEventListener("click", limparCadastro);
