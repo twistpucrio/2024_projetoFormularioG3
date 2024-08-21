@@ -1,4 +1,3 @@
-
 // Funções:
 
 // Limpa:
@@ -113,6 +112,5 @@ window.addEventListener("load", function() {
     verificarArquivo();
 
 
-  });
-});
+ });
 

@@ -86,42 +86,40 @@ window.addEventListener("load", function(){
         let email = document.querySelector("#email").value;
         let senha = document.querySelector("#senha").value;
         let senhaVer = document.querySelector("#senhaver").value;
-       
 
-        if (verificaNome(nome) != -1){
-            resposta += "Nome inválido\n";
-        }
-
-        if (verificaCpf(cpf) == -1){
-            resposta += "CPF inválido\n";
-        }
-
-        if (verificaSenha(senha) == -1){
-            resposta += "A senha precisa ter um mínimo de 8 e um máximo de 15 caracteres, devendo haver pelo menor uma letra maiúscula, um número e um caractere especial\n";
-        } 
-        else{
-            if (verificaSenhaVer(senhaVer, senha) == -1){
-                resposta += "A senha de verificação tem que ser igual à outra\n";
+        if (nome != "" && cpf != "" && dataNasc != "" && user != "" && email != "" && senha != "" && senhaVer != "") {
+            if (verificaNome(nome) != -1){
+                resposta += "Nome inválido\n";
             }
-        }
-        if(!verificaUsuario(user)){
-            resposta += "Usuário invalido\n";
-        }
+    
+            if (verificaCpf(cpf) == -1){
+                resposta += "CPF inválido\n";
+            }
 
-        if(!verificaEmail(email)){
-            resposta += "Email invalido\n"
-        }
-        if(!verificaDataNasc(dataNasc))
-        {
-            resposta +="Data de nascimento invalida\n";
-        }
+            if(!verificaDataNasc(dataNasc)){
+                resposta +="Data de nascimento inválida\n";
+            }
 
-        // if (nome != "" && cpf != "" && senha != "" && senhaVer != "") {
+            if(!verificaUsuario(user)){
+                resposta += "Usuário inválido\n";
+            }
+    
+            if(!verificaEmail(email)){
+                resposta += "Email inválido\n"
+            }
+    
+            if (verificaSenha(senha) == -1){
+                resposta += "A senha precisa ter um mínimo de 8 e um máximo de 15 caracteres, devendo haver pelo menor uma letra maiúscula, um número e um caractere especial\n";
+            }else{
+                if (verificaSenhaVer(senhaVer, senha) == -1){
+                    resposta += "A senha de verificação tem que ser igual à outra\n";
+                }
+            }
 
-        // }
-        // else {
-        //     resposta += "Por favor, digite tudo!";
-        // }
+        }
+        else {
+            resposta += "Por favor, digite tudo!";
+        }
         
         alert(resposta);
     });
