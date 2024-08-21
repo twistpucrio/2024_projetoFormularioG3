@@ -87,9 +87,7 @@ window.addEventListener("load", function(){
         let senha = document.querySelector("#senha").value;
         let senhaVer = document.querySelector("#senhaver").value;
 
-        //nome != "" && cpf != "" && dataNasc != "" && user != "" && email != "" && senha != "" && senhaVer != ""
-
-        if (true) {
+        if (nome != "" && cpf != "" && dataNasc != "" && user != "" && email != "" && senha != "" && senhaVer != "") {
             if (verificaNome(nome) != -1){
                 resposta += "Nome inválido\n";
             }
