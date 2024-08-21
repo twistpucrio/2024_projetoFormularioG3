@@ -117,7 +117,6 @@ window.addEventListener("load", function() {
 });
 
 
-=======
 //funcoes:
 
 //limpa:
