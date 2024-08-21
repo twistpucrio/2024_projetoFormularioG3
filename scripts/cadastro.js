@@ -5,12 +5,8 @@ function verificaNome(dados){
 
 function verificaCpf(dados){
     let resultado = dados.search(/\D/);
-
-    alert(resultado);
-    alert(dados.length);
     
     if (dados.length == 11 && resultado == -1){
-        alert("não é possivel");
         return 1;
     }
     return -1;
@@ -38,6 +34,15 @@ function verificaEmail(email){
 }
 
 function verificaSenha(dados){
+    const padrao1 = /(?=.*[-\#\$\.\%\&\*])(?=.*[A-Z])(?=.*\d).{8,15}/;
+    const padrao2 = /0+/;
+    
+    if (padrao1.test(dados) && !padrao2.test(dados)){
+        return 1;
+    }
+    else{
+        return -1;
+    }
 
 }
 
@@ -91,8 +96,13 @@ window.addEventListener("load", function(){
             resposta += "CPF inválido\n";
         }
 
-        if (verificaSenhaVer(senhaVer, senha) == -1){
-            resposta += "A senha de verificação tem que ser igual à outra\n";
+        if (verificaSenha(senha) == -1){
+            resposta += "A senha precisa ter um mínimo de 8 e um máximo de 15 caracteres, devendo haver pelo menor uma letra maiúscula, um número e um caractere especial\n";
+        } 
+        else{
+            if (verificaSenhaVer(senhaVer, senha) == -1){
+                resposta += "A senha de verificação tem que ser igual à outra\n";
+            }
         }
         if(!verificaUsuario(user)){
             resposta += "Usuário invalido\n";

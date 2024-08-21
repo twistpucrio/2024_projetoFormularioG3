@@ -1,52 +1,57 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto 1</title>
-    <script src="javaBusca.js"></script>
 
-</head>
-<body>
-    <div id="conteudo">
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projeto 1</title>
+        <script src="scripts/busca.js"></script>
+    
+    </head>
+    <body>
+        <div id="conteudo">
+    
+            <header>Projeto - Formulário e Requisitos</header>
+            <nav>
+                <a href="index.html">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="busca.html">Buscar</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="arquivo.html">Arquivo</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="buscaesubstitui.html">Buscar e Substituir</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="cadastro.html">Cadastro</a>
+            </nav>
+            <section>
+                
+                <form>
+                    <fieldset>
+                    <legend> Selecione o tipo de verificação</legend>
+                    <input type="radio" name="1op" id="esp" >Caracteres Especiais
+                    <input type="radio" name="1op" id="min" >Letras Minúsculas
+                    <input type="radio" name="1op" id="num" >Digitos Númericos
+                    <input type="radio" name="1op" id="mai" >Maiúsculas
+                    </fieldset>
+                    <legend> Escreva seu texto:</legend>
+                    <textarea id="texto"></textarea><br/>
+    
+                    <button type="button" id="btnlimpar" name="1op" class="btn">Limpa</button>
+                    <button type="button" id="btnsub" name="1op" class="btn">Submeter</button>
+                    
+    
+    
+                </form>
+    
+    
+    
+    
+            </section>
+            <footer>
+                Data de início: 13/08 <br/>
+                Desenvolvido para fins educacionais <br/>
+                Projeto TWIST 2024.2
+            </footer>
+    
+        </div>
+    </body>
+    </html>
+    
 
-        <header>Projeto - Formulário e Requisitos</header>
-        <nav>
-            <a href="index.html">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="busca.html">Buscar</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="arquivo.html">Arquivo</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="buscaesubstitui.html">Buscar e Substituir</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="cadastro.html">Cadastro</a>
-        </nav>
-        <section>
-            
-            <form>
-                <fieldset>
-                <legend> Selecione o tipo de verificação</legend>
-                <input type="radio" name="1op" id="1op">Caracteres Especiais
-                <input type="radio" name="1op" id="1op">Letras Minúsculas
-                <input type="radio" name="1op" id="1op">Digitos Númericos
-                <input type="radio" name="1op" id="1op">Maiúsculas
-                </fieldset>
-                <legend> Escreva seu texto:</legend>
-                <textarea></textarea><br/>
-                <button>
-                    limpar
-                </button><button>submeter</button>
 
-
-            </form>
-
-
-
-
-        </section>
-        <footer>
-            Data de início: 13/08 <br/>
-            Desenvolvido para fins educacionais <br/>
-            Projeto TWIST 2024.2
-        </footer>
-
-    </div>
-</body>
-</html>
