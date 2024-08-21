@@ -12,15 +12,24 @@ function verificaCpf(dados){
     return -1;
 }
 
-function verificaDataNasc(){
-
+function verificaDataNasc(dataNasc){
+    //
+    padrao= /[0-9]/;
+    let dataVetor = dataNasc.split('-');
+    let ano = dataVetor[0];
+    let tamAno = ano.length;
+    return (tamAno==4);
+    
 }
 
-function verificaUsuario(){
-
+function verificaUsuario(user){
+    const padrao= /^[a-z][a-z0-9._]*$/;
+    return padrao.test(user);
 }
 
-function verificaEmail(dados){
+function verificaEmail(email){
+    const padrao = /^[a-z._]+@[a-z._]+$/;
+    return padrao.test(email);
 
 }
 
@@ -77,6 +86,7 @@ window.addEventListener("load", function(){
         let email = document.querySelector("#email").value;
         let senha = document.querySelector("#senha").value;
         let senhaVer = document.querySelector("#senhaver").value;
+       
 
         if (verificaNome(nome) != -1){
             resposta += "Nome inválido\n";
@@ -93,6 +103,17 @@ window.addEventListener("load", function(){
             if (verificaSenhaVer(senhaVer, senha) == -1){
                 resposta += "A senha de verificação tem que ser igual à outra\n";
             }
+        }
+        if(!verificaUsuario(user)){
+            resposta += "Usuário invalido\n";
+        }
+
+        if(!verificaEmail(email)){
+            resposta += "Email invalido\n"
+        }
+        if(!verificaDataNasc(dataNasc))
+        {
+            resposta +="Data de nascimento invalida\n";
         }
 
         // if (nome != "" && cpf != "" && senha != "" && senhaVer != "") {
