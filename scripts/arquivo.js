@@ -112,5 +112,5 @@ window.addEventListener("load", function() {
     verificarArquivo();
 
 
-  });
-});
+ });
+
