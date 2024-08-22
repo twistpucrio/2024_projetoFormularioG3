@@ -1,0 +1,68 @@
+body{
+    background-color: aliceblue;
+    margin: 0 auto;
+}
+
+header{
+    font-family: "Roboto";
+    font-size: x-large;
+    text-align: center;
+    padding-top: 1.4%;
+    padding-bottom: 1.4%;
+    font-weight: 700;
+    color: rgb(0, 83, 139);
+}
+
+nav{
+    font-family: "PT_Sans";
+    font-size: large;
+    margin-bottom: 2%;
+    color: rgb(255, 197, 7);
+    text-align: center;
+    padding: 1.3%;
+    background-color: rgb(213, 235, 255);
+}
+
+nav a{
+    text-decoration: none;
+}
+
+form{
+    font-family: "Mukta";
+
+}
+
+footer{
+    font-family: "Roboto";
+    font-size: small;
+    color: gray;
+}
+
+fieldset{
+    border: 3px rgb(255, 197, 7) dotted;
+    padding: 2%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 1%
+}
+
+#pagina{
+    overflow: hidden;
+}
+
+#pagina_flex{
+    display:flex; height: 100vh; 
+    width:100vw; 
+    align-items: end; 
+    justify-content: start; 
+    flex-direction: column;
+}
+
+#conteudo{
+    flex-grow: 1; 
+    width: 100%;
+}
+
+#footer{
+    width: 100%
+}
