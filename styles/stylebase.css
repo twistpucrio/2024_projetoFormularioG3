@@ -1,0 +1,49 @@
+body{
+    background-color: aliceblue;
+}
+
+header{
+    font-family: "Roboto";
+    font-size: x-large;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    font-weight: 700;
+    color: rgb(0, 83, 139);
+}
+
+nav{
+    font-family: "PT_Sans";
+    font-size: large;
+    padding-bottom: 2%;
+    color: rgb(255, 197, 7);
+    text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+form{
+    font-family: "Mukta";
+
+}
+
+footer{
+    font-family: "Roboto";
+    text-align: right;
+    font-size: small;
+    padding-left: 72%;
+    padding-bottom: 3%;
+
+    position: fixed;
+    bottom: 0;
+}
+
+fieldset{
+    border: 3px rgb(255, 197, 7) dotted;
+    padding: 2%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 1%
+}
