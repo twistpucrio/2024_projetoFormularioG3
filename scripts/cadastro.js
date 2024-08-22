@@ -5,30 +5,44 @@ function verificaNome(dados){
 
 function verificaCpf(dados){
     let resultado = dados.search(/\D/);
-
-    alert(resultado);
-    alert(dados.length);
     
     if (dados.length == 11 && resultado == -1){
-        alert("não é possivel");
         return 1;
     }
     return -1;
 }
 
-function verificaDataNasc(){
-
+function verificaDataNasc(dataNasc){
+    //
+    padrao= /[0-9]/;
+    let dataVetor = dataNasc.split('-');
+    let ano = dataVetor[0];
+    let tamAno = ano.length;
+    return (tamAno==4);
+    
 }
 
-function verificaUsuario(){
-
+function verificaUsuario(user){
+    const padrao= /^[a-z][a-z0-9._]*$/;
+    return padrao.test(user);
 }
 
-function verificaEmail(dados){
+function verificaEmail(email){
+    const padrao = /^[a-z._]+@[a-z._]+$/;
+    return padrao.test(email);
 
 }
 
 function verificaSenha(dados){
+    const padrao1 = /(?=.*[-\#\$\.\%\&\*])(?=.*[A-Z])(?=.*\d).{8,15}/;
+    const padrao2 = /0+/;
+    
+    if (padrao1.test(dados) && !padrao2.test(dados)){
+        return 1;
+    }
+    else{
+        return -1;
+    }
 
 }
 
@@ -73,24 +87,39 @@ window.addEventListener("load", function(){
         let senha = document.querySelector("#senha").value;
         let senhaVer = document.querySelector("#senhaver").value;
 
-        if (verificaNome(nome) != -1){
-            resposta += "Nome inválido\n";
+        if (nome != "" && cpf != "" && dataNasc != "" && user != "" && email != "" && senha != "" && senhaVer != "") {
+            if (verificaNome(nome) != -1){
+                resposta += "Nome inválido\n";
+            }
+    
+            if (verificaCpf(cpf) == -1){
+                resposta += "CPF inválido\n";
+            }
+
+            if(!verificaDataNasc(dataNasc)){
+                resposta +="Data de nascimento inválida\n";
+            }
+
+            if(!verificaUsuario(user)){
+                resposta += "Usuário inválido\n";
+            }
+    
+            if(!verificaEmail(email)){
+                resposta += "Email inválido\n"
+            }
+    
+            if (verificaSenha(senha) == -1){
+                resposta += "A senha precisa ter um mínimo de 8 e um máximo de 15 caracteres, devendo haver pelo menor uma letra maiúscula, um número e um caractere especial\n";
+            }else{
+                if (verificaSenhaVer(senhaVer, senha) == -1){
+                    resposta += "A senha de verificação tem que ser igual à outra\n";
+                }
+            }
+
         }
-
-        if (verificaCpf(cpf) == -1){
-            resposta += "CPF inválido\n";
+        else {
+            resposta += "Por favor, digite tudo!";
         }
-
-        if (verificaSenhaVer(senhaVer, senha) == -1){
-            resposta += "A senha de verificação tem que ser igual à outra\n";
-        }
-
-        // if (nome != "" && cpf != "" && senha != "" && senhaVer != "") {
-
-        // }
-        // else {
-        //     resposta += "Por favor, digite tudo!";
-        // }
         
         alert(resposta);
     });
