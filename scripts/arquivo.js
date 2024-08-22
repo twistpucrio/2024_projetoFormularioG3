@@ -8,7 +8,7 @@ function limpa()
   //funfa
 }
 
-// Verifica:
+// funcoes para verificar as condições de nomeação:
 function validaMaiuscula(nomeArquivo) 
 {
   const padrao = /^[A-Z]/;
@@ -17,28 +17,17 @@ function validaMaiuscula(nomeArquivo)
 
 function validaCaracter(nomeArquivo) 
 {
-  const padrao = /[^a-zA-Z0-9_]/;
-  return !(padrao.test(nomeArquivo)); 
+  const padrao = /^[a-zA-Z0-9_.]+$/;
+  return padrao.test(nomeArquivo); 
 }
 
 function validaTamanho(tam) {
-  return !(tam < 8 || tam > 15); 
-}
-
-function validaNomeArquivo(nomeArquivo, tam) {
-
-  if (validaCaracter(nomeArquivo) && validaTamanho(tam) && validaMaiuscula(nomeArquivo))
-  {
-    alert("Nome do arquivo válido");
-  } 
-  else 
-  {
-    alert("Nome do arquivo inválido");
-  }
-
+  return (tam > 8 && tam < 15); 
 }
 
 
+
+///////Verificar o tipo do arquivo//////////////
 function obterExtensaoArquivo(nomeArquivo) {
   return nomeArquivo.split('.').pop().toLowerCase();
 }
@@ -75,19 +64,18 @@ function verificarArquivo() {
       return;
   }
 
-  if (verificarCorrespondenciaTipo(nomeArquivo, tipoSelecionado)) {
-      alert('Tudo certo! O tipo selecionado corresponde ao tipo do arquivo.');
-  } else {
-      alert('O tipo selecionado não corresponde ao tipo do arquivo.');
-  }
+  if (!verificarCorrespondenciaTipo(nomeArquivo, tipoSelecionado)) {
+    alert('O tipo selecionado não corresponde ao tipo do arquivo.');
+  } 
+     
 }
-
+//////////////////////////////////////////
 
 
 window.addEventListener("load", function() {
   let btnlimpa = document.querySelector("#btnlimpa");
   let btnverifica = document.getElementById("submete");
-  
+  let nomeArquivo= null;
 
   btnlimpa.addEventListener("click", function() {
     limpa();
@@ -95,22 +83,40 @@ window.addEventListener("load", function() {
 
   btnverifica.addEventListener("click", function() 
   {
+    let resp ="";
     let arquivo = document.getElementById('arquivo');
-    let nomeArquivo = arquivo.value.split('\\').pop();
+    nomeArquivo = arquivo.value.split('\\').pop();
     let tam = nomeArquivo.length;
 
-    if (nomeArquivo) 
+    if(!nomeArquivo)
     {
-      validaNomeArquivo(nomeArquivo, tam);
-      alert(nomeArquivo);
+      alert("Por favor faça upload do arquivo");
     }
-     else 
-    {
-      alert("Por favor, selecione um arquivo.");
+    else {
+      if (!validaMaiuscula(nomeArquivo))
+        {
+          resp+="Nome invalido, deve começar com letra maiuscula\n";
+        }
+    
+        if(!validaCaracter(nomeArquivo))
+        {
+          resp+="caracteres invalidos\n";
+        }
+        
+        if(!validaTamanho(tam))
+        {
+          resp +="Tamanho invalido\n";
+        }
+       
+        if(validaMaiuscula(nomeArquivo) && validaCaracter(nomeArquivo) && validaTamanho(tam) )
+        {
+          resp+="Tudo certo com o nome! :D";
+        }
+
+        alert(resp);
+        verificarArquivo();
+    
     }
-
-    verificarArquivo();
-
-
+    
   });
 });
