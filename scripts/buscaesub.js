@@ -1,23 +1,11 @@
 function substituir(entrada,altera){
-    alert(entrada.replace(altera, '**'));
-
+    let sub=document.querySelector('#alterar').value;
+    let regex = new RegExp(altera, 'g');
+    let x = entrada.replace(regex, sub);
+    alert(x);
     }
 
-    window.addEventListener('load', function(){
-    let btnReplace;
-
-    btnReplace=document.querySelector('#btnReplace');
-    let entrada, alterar;
     
-    btnReplace.addEventListener('click', function(){
-        entrada= document.querySelector('#entrada');
-        alterar=document.querySelector('#alterar');
-        substituir(entrada.value, alterar.value);
-    
-    });
-     
-    });
-
     function limpar(){
         let texto= document.querySelector('#apagar');
         alert(texto.value);
@@ -31,14 +19,49 @@ function substituir(entrada,altera){
     
     }
   
-    window.addEventListener("load", function(){
-        let btnLimpar=document.querySelector("#btnlimpar"); 
-        
+
+    window.addEventListener('load', function(){
+    let btnReplace;
+
+    btnReplace=document.querySelector('#btnReplace');
+    let entrada, alterar;
+    
+    btnReplace.addEventListener('click', function(){
+        entrada= document.querySelector('#apagar');
+        alterar=document.querySelector('#entrada');
+        substituir(entrada.value, alterar.value);
+    
+    });
+
+    let btnLimpar=document.querySelector("#btnlimpar"); 
     
         btnLimpar.addEventListener('click', function(){
             limpar();
     
-        });
-    })
+     
+    });
 
-    
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+        
+
