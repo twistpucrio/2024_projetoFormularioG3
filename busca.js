@@ -25,50 +25,132 @@ window.addEventListener("load", function(){
 
 
 
-function cortar(entrada){
-    alert('172892')///////////////////////////////////////////////////////////
-    let result= entrada.split(' ');
+
+
+
+function cortaresp(palavras){
+    let result= palavras.split(' ');
     alert(result);
+    let num=0;
+    let caracteresEspeciais = [];
     for(elemento of result){
-        alert(elemento); 
-        let num=0;
-        if(typeoff(elemento)=/\w/){
-            num+=1
+        let matches = elemento.match(/[^\w\s]/g); 
+        if (matches) {
+            caracteresEspeciais.push(...matches);
+            num += matches.length;
         }
     }
-    if(num!=0){
-        alert('Esse texto possui'+num+'caracteres especiais')
-    }
+    if (num !== 0) {
+        alert('Esse texto possui ' + num + ' caracteres especiais: ' + caracteresEspeciais.join(' ,'));
+    } 
     else{
-        alert('Esse texto não possui caracteres especiais.')
+        alert('Esse texto não possui caracteres especiais.');
+    }
+}          
+        
+
+
+function contarnum(palavras) {
+    let result = palavras.split(' ');
+    alert(result);
+    
+    let num = 0;
+    let numeros = [];
+    
+    for ( elemento of result) {
+        
+        let matches = elemento.match(/\d/g); 
+        
+        if (matches) {
+            numeros.push(...matches);
+            num += matches.length;
+        }
+    }
+    
+    if (num !== 0) {
+        alert('Esse texto possui ' + num + ' números: ' + numeros.join(' ,'));
+    } else {
+        alert('Esse texto não possui números.');
     }
 }
+
+function contarmai(palavras) {
+    let result = palavras.split(' ');
+    alert(result);
+    
+    let num = 0;
+    let maiusculas = [];
+    
+    for (let elemento of result) {
+        
+        let matches = elemento.match(/[A-Z]/g); 
+        
+        if (matches) {
+            maiusculas.push(...matches);
+            num += matches.length;
+        }
+    }
+    
+    if (num !== 0) {
+        alert('Esse texto possui ' + num + ' letras maiúsculas: ' + maiusculas.join(' ,'));
+    } else {
+        alert('Esse texto não possui letras maiúsculas.');
+    }
+}
+
+
+function contarmin(palavras) {
+    let result = palavras.split(' ');
+    alert(result);
+    
+    let num = 0;
+    let min = [];
+    
+    for (let elemento of result) {
+        
+        let matches = elemento.match(/[a-z]/g); 
+        
+        if (matches) {
+            min.push(...matches);
+            num += matches.length;
+        }
+    }
+    
+    if (num !== 0) {
+        alert('Esse texto possui ' + num + ' letras minúsculas: ' + min.join(' ,'));
+    } else {
+        alert('Esse texto não possui letras maiúsculas.');
+    }
+}
+
+
 
 window.addEventListener("load", function(){
 
     let btnSub = document.querySelector("#btnsub"); 
 
     btnSub.addEventListener("click", function() {
-        alert('99')//////////////////////////////////////////////////////////
+
          botao();
-         alert('09')////////////////////////////////////////////////////
+        
     });
 });
 
 function botao(){
     let rb=document.getElementsByName('1op'); 
-    alert(rb)
     let txt=document.querySelector('#texto');
-    alert('8781')//////////////////////////////////////////////////////////
-    for(let cada of rb){
-        alert('oi')//////////////////////////////////////////////////////////da pra verificar o id ou value de cada 'cada'????
-        if(cada().id=="esp"){
-            let palavras=cortar(txt.value)
-            alert('7282')/////////////////////////////////////////////////////////
-            
-
-
+   
+    for (let cada of rb) {
+        if (cada.checked &&cada.value === "esp") {
+              cortaresp(txt.value);
+       } 
+       if (cada.checked &&cada.value === "min") {
+            contarmin(txt.value);
         }
-
-    }
-    }
+        if (cada.checked &&cada.value === "mai") {
+            contarmai(txt.value);
+       }
+       if (cada.checked &&cada.value === "num") {
+          contarnum(txt.value);
+   }
+    }}
