@@ -6,7 +6,6 @@ function limpa() {
     for (let n of rdOpcoes) {
         n.checked = false;
     }
-        alert(val1.value);
         val1.value=' ';
 }
 

@@ -6,17 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Projeto 1</title>
         <script src="scripts/busca.js"></script>  
+        <link rel="stylesheet" href="styles/stylebase.css">
+        <link rel="stylesheet" href="styles/stylebusca.css">
     </head>
     <body>
         <div id="conteudo">
     
             <header>Projeto - Formulário e Requisitos</header>
             <nav>
-                <a href="index.html">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="busca.html">Buscar</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="arquivo.html">Arquivo</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="buscaesub.html">Buscar e Substituir</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="cadastro.html">Cadastro</a>
+                <a href="index.html">Home</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="busca.html">Buscar</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="arquivo.html">Arquivo</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="buscaesub.html">Buscar e Substituir</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="cadastro.html">Cadastro</a>
             </nav>
             <section>
                 
@@ -28,12 +30,14 @@
                     <input type="radio" name="1op" value="num" >Digitos Númericos
                     <input type="radio" name="1op" value="mai" >Maiúsculas
                     </fieldset>
+                    <div id="textarea">
                     <legend> Escreva seu texto:</legend>
-                    <textarea id="texto"></textarea><br/>
+                    <textarea id="texto"
+                    cols="40" rows="10"></textarea><br/>
     
                     <button type="button" id="btnlimpar" name="1op" class="btn">Limpa</button>
                     <button type="button" id="btnsub" name="1op" class="btn">Submeter</button>
-                    
+                </div>
     
     
                 </form>

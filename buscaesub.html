@@ -5,38 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto 1</title>
     <script src="scripts/buscaesub.js"></script>
+    <link rel="stylesheet" href="styles/stylebase.css">
+    <link rel="stylesheet" href="styles/stylebusca.css">
 </head>
 <body>
     <div id="conteudo">
 
         <header>Projeto - Formulário e Requisitos</header>
         <nav>
-            <a href="index.html">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="busca.html">Buscar</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="arquivo.html">Arquivo</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="buscaesub.html">Buscar e Substituir</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="">Cadastro</a>
+            <a href="index.html">Home</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="busca.html">Buscar</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="arquivo.html">Arquivo</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="buscaesub.html">Buscar e Substituir</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="cadastro.html">Cadastro</a>
         </nav>
         <section>
             
         
                 
         <form action="">
+            <div id="textarea">
+                <section id="Pesquisa">
             <label for="entrada">Pesquisa:</label>
             
-            <textarea name="entrada" id="entrada"></textarea>
-            <br/>
+            <textarea name="entrada" id="entrada" cols="30" rows="1"></textarea>
+            <br/><br/>
 
             <label for="alterar">Substituir:</label>
-            <textarea name="alterar" id="alterar"></textarea>
+            <textarea name="alterar" id="alterar" cols="30" rows="1"></textarea>
+        </section>
+       
                         <br/>
             
 <br/>
             <label for="apagar">Escreva seu texto:</label><br/>
-            <textarea name="conteudo" id="apagar"></textarea>
+            <textarea name="conteudo" id="apagar" cols="40" rows="10"></textarea>
 <br/>
             <input type="button" value="Limpar" id="btnlimpar">
             <input type="button" value="Substituir" id="btnReplace">
+        </div>
             
 
             

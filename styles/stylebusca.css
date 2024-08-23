@@ -1,0 +1,18 @@
+#textarea{
+    text-align: center;
+}
+#btnlimpar,#btnReplace,button{
+    color:black;
+    font-style: oblique;
+}
+textarea{
+    color:black;
+    border: 3px rgb(255, 197, 7) dotted;
+}
+
+fieldset{
+    width: 600px;
+    text-align: center;
+    margin-left: 30%;
+}
+
