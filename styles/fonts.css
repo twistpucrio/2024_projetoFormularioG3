@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Josefin";
+    src: url(../fonts/Josefin/JosefinSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Mukta";
+    src: url(../fonts/Mukta/Mukta-Regular.ttf);
+}
+
+@font-face {
+    font-family: "PT_Sans";
+    src: url(../fonts/PT_Sans/PTSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
