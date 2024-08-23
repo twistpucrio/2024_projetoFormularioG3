@@ -1,0 +1,36 @@
+#regrasNome
+{
+    width: 500px;
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(249, 252, 255);
+    padding: 1%;
+}
+
+h4
+{
+    font-size: x-large;
+    color: rgb(0, 83, 139);
+    text-align: center;
+}
+
+li{
+    color:  rgb(2, 48, 79);;
+    font-size: larger;
+}
+
+legend
+{
+    text-align: center;
+    font-size: larger;
+    
+}
+
+#tipoArq{
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
