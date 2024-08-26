@@ -9,64 +9,67 @@
     <link rel="stylesheet" href="styles/stylearquivo.css">
 </head>
 <body>
-    <div id="containerArq">
-        <header>Projeto - Formulário e Requisitos</header>
-        <nav id="navArq">
-            <a href="index.html">Home</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
-            <a href="busca.html">Buscar</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
-            <a href="arquivo.html">Arquivo</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
-            <a href="buscaesubstitui.html">Buscar e Substituir</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
-            <a href="cadastro.html">Cadastro</a>
-        </nav>
-        <br>
-
-        <header id="headerArq"></header>
-        
-        <section id="mainArq">
-            <fieldset id="tipoArq">
-                <legend>Selecione o tipo de arquivo:</legend>
-                <input type="checkbox" id="imagens" name="JPG/JPEG/PNG">
-                <label for="imagens">JPG/JPEG/PNG</label>
+    <div id="pagina">
+        <div id="pagina_flex">
+            <div id="conteudo">
+                <header>Projeto - Formulário e Requisitos</header>
+                <nav id="navArq">
+                    <a href="index.html">Home</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="busca.html">Buscar</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="arquivo.html">Arquivo</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="buscaesub.html">Buscar e Substituir</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="cadastro.html">Cadastro</a>
+                </nav>
                 <br>
-                <input type="checkbox" id="doc" name="op">
-                <label for="doc">DOC</label>
-                <br>
-                <input type="checkbox" id="pdf" name="op">
-                <label for="pdf">PDF</label>
-                <br>
-                <input type="checkbox" id="csv" name="op">
-                <label for="csv">CSV</label>
-            </fieldset>   
-            <br>
-       <div id="regrasNome">
-          <h4>Regras de nomenclatura:</h4>
-          <ul>
-            <li>Não utilizar caracteres especiais no nome do arquivo(exceto underscore)</li>
-            <li>Iniciar com letra maiuscula</li>
-            <li>Tamanho minimo de 8 caracteres e máximo de 15 caracteres</li>
-          </ul>
-        </div>
-        
-        <h4>Arquivo:</h4>
-        <div id="escArq">
-            <fieldset>
-                <input type="file" name="arquivo" id="arquivo">
-                <br><br>
-            </fieldset>
-        </div>
-            
-        <div id="botoes">
-            <button id="btnlimpa">Limpar</button>
-            <input type="button" value="submeter" id="submete">
-        </div>
+                
+                <section id="mainArq">
+                    <fieldset id="tipoArq">
+                        <legend>Selecione o tipo de arquivo:</legend>
+                        <input type="checkbox" id="imagens" name="JPG/JPEG/PNG">
+                        <label for="imagens">JPG/JPEG/PNG</label>
+                        <br>
+                        <input type="checkbox" id="doc" name="op">
+                        <label for="doc">DOC</label>
+                        <br>
+                        <input type="checkbox" id="pdf" name="op">
+                        <label for="pdf">PDF</label>
+                        <br>
+                        <input type="checkbox" id="csv" name="op">
+                        <label for="csv">CSV</label>
+                    </fieldset>   
+                    <br>
+            <div id="regrasNome">
+                <h4>Regras de nomenclatura:</h4>
+                <ul>
+                    <li>Não utilizar caracteres especiais no nome do arquivo(exceto underscore)</li>
+                    <li>Iniciar com letra maiuscula</li>
+                    <li>Tamanho minimo de 8 caracteres e máximo de 15 caracteres</li>
+                </ul>
+                </div>
+                
+                <h4>Arquivo:</h4>
+                <div id="escArq">
+                    <fieldset>
+                        <input type="file" name="arquivo" id="arquivo">
+                        <br><br>
+                    </fieldset>
+                </div>
+                    
+                <div id="botoes">
+                    <button id="btnlimpa">Limpar</button>
+                    <input type="button" value="submeter" id="submete">
+                </div>
 
-    </section>
-
-        <footer id="footerArq">
-            Data de início: 13/08 <br/>
-            Desenvolvido para fins educacionais <br/>
-            Projeto TWIST 2024.2
-        </footer>
+            </section>
+            </div>
+                <div id="footer">
+                <footer id="footerArq">
+                    Data de início: 13/08 <br/>
+                    Desenvolvido para fins educacionais <br/>
+                    Projeto TWIST 2024.2
+                </footer>
+            </div>
+        </div>
     </div>
 </body>
 
