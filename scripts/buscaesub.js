@@ -8,13 +8,10 @@ function substituir(entrada,altera){
     
     function limpar(){
         let texto= document.querySelector('#apagar');
-        alert(texto.value);
         texto.value=' ';
         let ora= document.querySelector('#entrada');
-        alert(ora.value);
         ora.value=' ';
         let letra= document.querySelector('#alterar');
-        alert(letra.value);
         letra.value=' ';
     
     }
@@ -29,7 +26,16 @@ function substituir(entrada,altera){
     btnReplace.addEventListener('click', function(){
         entrada= document.querySelector('#apagar');
         alterar=document.querySelector('#entrada');
-        substituir(entrada.value, alterar.value);
+        let sub=document.querySelector('#alterar');
+        let textoNaoVazio1 = entrada.value.trim() !== '';
+        let textoNaoVazio2 = alterar.value.trim() !== '';
+        let textoNaoVazio3 = sub.value.trim() !== '';
+        if(textoNaoVazio1&&textoNaoVazio2&&textoNaoVazio3){
+            substituir(entrada.value, alterar.value);
+        
+        } else{
+            alert('Certifique-se que nenhum campo de texto não esteja vazio.')
+        }
     
     });
 
