@@ -4,12 +4,11 @@ function verificaNome(dados){
 }
 
 function verificaCpf(dados){
-    let resultado = dados.search(/\D/);
+    //let resultado = dados.search(/\D/);
+    const padrao = /(\d\d\d+\.+\d\d\d+\.+\d\d\d+\-+\d\d)/;
+    let resultado = padrao.test(dados);
     
-    if (dados.length == 11 && resultado == -1){
-        return 1;
-    }
-    return -1;
+    return resultado;
 }
 
 function verificaDataNasc(dataNasc){
@@ -92,7 +91,7 @@ window.addEventListener("load", function(){
                 resposta += "Nome inválido\n";
             }
     
-            if (verificaCpf(cpf) == -1){
+            if (!verificaCpf(cpf)){
                 resposta += "CPF inválido\n";
             }
 
