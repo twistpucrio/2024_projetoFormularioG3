@@ -26,9 +26,16 @@ function substituir(entrada,altera){
     btnReplace.addEventListener('click', function(){
         entrada= document.querySelector('#apagar');
         alterar=document.querySelector('#entrada');
-
+        let sub=document.querySelector('#alterar');
+        let textoNaoVazio1 = entrada.value.trim() !== '';
+        let textoNaoVazio2 = alterar.value.trim() !== '';
+        let textoNaoVazio3 = sub.value.trim() !== '';
+        if(textoNaoVazio1&&textoNaoVazio2&&textoNaoVazio3){
             substituir(entrada.value, alterar.value);
         
+        } else{
+            alert('Certifique-se que nenhum campo de texto não esteja vazio.')
+        }
     
     });
 

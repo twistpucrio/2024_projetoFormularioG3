@@ -115,23 +115,41 @@ function contarmin(palavras) {
 
 
 function botao(){
-    let rb=document.getElementsByName('1op'); 
-    let txt=document.querySelector('#texto');
-   
+    let rb = document.getElementsByName('1op'); 
+    let txt = document.querySelector('#texto'); 
+    let btnSub = document.querySelector("#btnsub"); 
+
+    let textoNaoVazio = txt.value.trim() !== '';
+    let opcaoSelecionada = false;
+
     for (let cada of rb) {
-        if (cada.checked &&cada.value === "esp") {
-              cortaresp(txt.value);
-       } 
-       if (cada.checked &&cada.value === "min") {
-            contarmin(txt.value);
+        if (cada.checked) {
+            opcaoSelecionada = true;
+            break; 
         }
-        if (cada.checked &&cada.value === "mai") {
-            contarmai(txt.value);
-       }
-       if (cada.checked &&cada.value === "num") {
-          contarnum(txt.value);
-   }
-}}
+    }
+
+    if (textoNaoVazio && opcaoSelecionada) {
+        for (let cada of rb) {
+            if (cada.checked) {
+                if (cada.value === "esp") {
+                    cortaresp(txt.value);
+                } else if (cada.value === "min") {
+                    contarmin(txt.value);
+                } else if (cada.value === "mai") {
+                    contarmai(txt.value);
+                } else if (cada.value === "num") {
+                    contarnum(txt.value);
+                }
+                break; 
+            }
+        }
+    } else {
+        
+        alert('Certifique-se de que tenha uma opção selecionada e um texto para ser verificado.');
+    }
+}
+
 
 
 window.addEventListener("load", function(){
