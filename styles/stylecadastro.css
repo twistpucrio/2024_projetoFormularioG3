@@ -1,0 +1,29 @@
+.cadastro_elementos{
+    text-align: center;
+}
+
+.cadastro_elementos label{
+    margin-bottom: 5%;
+}
+
+.cadastro_elementos input{
+    width: 80%;
+    box-sizing: border-box;
+    padding-top: 0.7%;
+    padding-bottom: 0.7%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-bottom: 2%;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.cadastro_elementos input:focus{
+    border: 1px solid red;
+    font-weight: bold;
+}
+
+#cadastro_senha input{
+    width: 40%;
+}

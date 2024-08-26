@@ -12,15 +12,17 @@
     <div id="pagina">
         <div id="pagina_flex">
             <div id="conteudo">
-                <header>Projeto - Formulário e Requisitos</header>
-                <nav id="navArq">
-                    <a href="index.html">Home</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
-                    <a href="busca.html">Buscar</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
-                    <a href="arquivo.html">Arquivo</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
-                    <a href="buscaesub.html">Buscar e Substituir</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+      <nav id="navArq">
+                    <a href="index.html">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="busca.html">Buscar</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="arquivo.html">Arquivo</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="buscaesub.html">Buscar e Substituir</a>&nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="cadastro.html">Cadastro</a>
-                </nav>
+       </nav>
+                
                 <br>
+
+                <header>Projeto - Formulário e Requisitos</header>
                 
                 <section id="mainArq">
                     <fieldset id="tipoArq">
@@ -28,42 +30,39 @@
                         <input type="checkbox" id="imagens" name="JPG/JPEG/PNG">
                         <label for="imagens">JPG/JPEG/PNG</label>
                         <br>
-                        <input type="checkbox" id="doc" name="op">
+                        <input type="checkbox" id="doc" name="doc">
                         <label for="doc">DOC</label>
                         <br>
-                        <input type="checkbox" id="pdf" name="op">
+                        <input type="checkbox" id="pdf" name="pdf">
                         <label for="pdf">PDF</label>
                         <br>
-                        <input type="checkbox" id="csv" name="op">
+                        <input type="checkbox" id="csv" name="csv">
                         <label for="csv">CSV</label>
-                    </fieldset>   
+                    </fieldset> 
+
                     <br>
-            <div id="regrasNome">
-                <h4>Regras de nomenclatura:</h4>
-                <ul>
-                    <li>Não utilizar caracteres especiais no nome do arquivo(exceto underscore)</li>
-                    <li>Iniciar com letra maiuscula</li>
-                    <li>Tamanho minimo de 8 caracteres e máximo de 15 caracteres</li>
-                </ul>
-                </div>
+                    
+                    <div id="regrasNome">
+                        <h4>Regras de nomenclatura:</h4>
+                        <ul>
+                            <li>Não utilizar caracteres especiais no nome do arquivo(exceto underscore)</li>
+                            <li>Iniciar com letra maiuscula</li>
+                            <li>Tamanho minimo de 8 caracteres e máximo de 15 caracteres</li>
+                        </ul>
+                    </div>
                 
-                <h4>Arquivo:</h4>
-                <div id="escArq">
-                    <fieldset>
+                    <h4>Arquivo:</h4>
+                    <form>
                         <input type="file" name="arquivo" id="arquivo">
                         <br><br>
-                    </fieldset>
-                </div>
-                    
-                <div id="botoes">
-                    <button id="btnlimpa">Limpar</button>
-                    <input type="button" value="submeter" id="submete">
-                </div>
+                        <button id="btnlimpa">Limpar</button>
+                        <input type="button" value="submeter" id="submete">
+                    </form>
 
-            </section>
+                </section>
             </div>
-                <div id="footer">
-                <footer id="footerArq">
+            <div id="footer"> 
+                <footer>
                     Data de início: 13/08 <br/>
                     Desenvolvido para fins educacionais <br/>
                     Projeto TWIST 2024.2
