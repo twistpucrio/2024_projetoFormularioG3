@@ -4,4 +4,22 @@
 
 .foto_perfil{
     width: 80%;
+    border-radius: 100%;
+    border: 8px rgb(255, 197, 7) dotted;
+}
+h3{
+    text-align: center;
+    font-size: x-large;
+    font-family: "Roboto";
+    color: rgb(0, 83, 139);
+    background-color: antiquewhite;
+    padding: 1%;
+    margin-top: 0.2%;
+    
+}
+
+figcaption{
+    display: flex;
+    margin-top: 3%;
+    font-size: larger;
 }
