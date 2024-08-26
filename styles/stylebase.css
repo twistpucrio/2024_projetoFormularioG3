@@ -11,11 +11,11 @@ header{
     padding-bottom: 1.4%;
     font-weight: 700;
     color: rgb(0, 83, 139);
+    background-color: rgb(186, 217, 247);
 }
 
 nav{
-    font-family: "PT_Sans";
-    font-size: large;
+    font-size: larger;
     margin-bottom: 2%;
     color: rgb(255, 197, 7);
     text-align: center;
@@ -24,12 +24,48 @@ nav{
 }
 
 nav a{
+    font-family: "PT_Sans";
+    margin-right: 1%;
+    margin-left: 1%;
     text-decoration: none;
+    color: rgb(25, 27, 117);
+}
+
+nav a:hover{
+    color: rgb(52, 143, 228);
+    text-shadow: 0px 0px 10px rgb(255, 197, 7);
+}
+
+nav a:visited{
+    color: rgb(74, 75, 172);
 }
 
 form{
     font-family: "Mukta";
+    font-size: large;
+    text-align: center;
+}
 
+
+legend{
+    font-family: "Roboto";
+    font-size: larger;
+    text-align: center;
+    font-weight: bolder;
+}
+
+input{
+    background-color: rgb(253, 254, 255);
+    border: 1.4px solid rgb(255, 197, 7);
+    padding: 0.5%;
+}
+
+input:hover{
+    box-shadow: 0px 0px 5px rgb(105, 143, 212);
+}
+
+input:active{
+    border: 1px solid rgb(127, 159, 201);
 }
 
 footer{
@@ -41,9 +77,25 @@ footer{
 fieldset{
     border: 3px rgb(252, 195, 10) dotted;
     padding: 2%;
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 20%;
+    margin-left: 20%;
     margin-bottom: 1%
+}
+
+button{
+    font-family: "Roboto";
+    font-size: medium;
+    border: 1px solid grey;
+    background-color: azure;
+    padding: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-top: 0.4%;
+}
+
+button:hover{
+    font-weight: 700;
+    box-shadow: 0px 0px 5px rgb(139, 135, 135);
 }
 
 #pagina{
