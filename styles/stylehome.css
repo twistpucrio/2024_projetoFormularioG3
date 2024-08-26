@@ -36,3 +36,10 @@ figcaption{
     text-align: center;
     width: 800px;
 }
+
+body{
+    overflow: scroll;
+    max-width: 100%;
+    max-height: 100%;
+}
+

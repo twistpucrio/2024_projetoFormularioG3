@@ -15,29 +15,27 @@
 
                 <header>Projeto - Formulário e Requisitos</header>
                 <nav>
-                    <a href="index.html">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="busca.html">Buscar</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="arquivo.html">Arquivo</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="buscaesub.html">Buscar e Substituir</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="index.html">Home</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="busca.html">Buscar</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="arquivo.html">Arquivo</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
+                    <a href="buscaesub.html">Buscar e Substituir</a>&nbsp;&nbsp;&starf;&nbsp;&nbsp;
                     <a href="cadastro.html">Cadastro</a>
                 </nav>
                 <section>       
                 <form action="">
-                    <label for="entrada">Pesquisa:</label>
                     
-                    <textarea name="entrada" id="entrada"></textarea>
+                    <textarea name="entrada" id="entrada" cols="30" placeholder="Pesquisa:" class="busca_sub"></textarea>
                     <br/>
 
-                    <label for="alterar">Substituir:</label>
-                    <textarea name="alterar" id="alterar"></textarea>
+                    <textarea name="alterar" id="alterar" cols="30" placeholder="Substituir:" class="busca_sub"></textarea>
                                 
                     
                      <br/><br/>
-                    <label for="apagar">Escreva seu texto:</label><br/>
-                    <textarea name="conteudo" id="apagar"></textarea>
+                    <label for="apagar" id="texto_sub">Escreva seu texto:</label><br/>
+                    <textarea name="conteudo" id="apagar" cols="40" rows="10"></textarea>
                     <br/>
-                    <input type="button" value="Limpar" id="btnlimpar">
-                    <input type="button" value="Substituir" id="btnReplace">
+                    <button id="btnlimpar">Limpar</button>
+                    <button id="btnReplace">Substituir</button>
                                               
                 </form>
                     

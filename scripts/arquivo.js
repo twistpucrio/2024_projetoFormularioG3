@@ -75,7 +75,7 @@ function verificarArquivo() {
 
 window.addEventListener("load", function() {
   let btnlimpa = document.querySelector("#btnlimpa");
-  let btnverifica = document.getElementById("submete");
+  let btnverifica = document.getElementById("#submete");
   let nomeArquivo= null;
 
   btnlimpa.addEventListener("click", function() {

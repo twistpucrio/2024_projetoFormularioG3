@@ -1,18 +1,40 @@
 #textarea{
     text-align: center;
 }
+
 #btnlimpar,#btnReplace,button{
     color:black;
     font-style: oblique;
 }
+
 textarea{
     color:black;
     border: 3px rgb(255, 197, 7) dotted;
+    margin-top: 0.5%;
 }
 
 fieldset{
-    width: 600px;
     text-align: center;
-    margin-left: 30%;
 }
 
+.busca_sub{
+    text-align: center;
+    font-size: larger;
+    align-content: center;
+}
+
+#texto_sub{
+    font-size: larger;
+    font-family: "Roboto";
+    padding-bottom: 0.6%;
+}
+
+#verification{
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.legenda_busca{
+    font-weight: 500;
+}
