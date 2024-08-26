@@ -27,9 +27,11 @@
                     <form action="" name="cadastro" id="cadastro">
                         <fieldset>
                             <legend>Dados Pessoais: </legend>
-                            <label for="nome">Nome: </label><input type="text" name="nome" id="nome">
-                            <label for="cpf">CPF: </label><input type="text" name="cpf" id="cpf">
-                            <label for="datanasc">Data Nascimento:</label><input type="date" name="datanasc" id="datanasc">
+                            <div class="cadastro_elementos">
+                                <input type="text" name="nome" id="nome" placeholder="Nome" id="nome_cadastro">
+                                <input type="text" name="cpf" id="cpf" placeholder="CPF" id="cpf_cadastro"> <br>
+                                <label for="datanasc">Data Nascimento:</label><br><input type="date" name="datanasc" id="datanasc">
+                            </div>
                         </fieldset>
                         <fieldset>
                             <legend>Dados do Perfil:</legend>
