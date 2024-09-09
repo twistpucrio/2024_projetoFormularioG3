@@ -27,13 +27,13 @@ function verificaUsuario(user){
 }
 
 function verificaEmail(email){
-    const padrao = /^[a-z._]+@[a-z._]+$/;
+    const padrao = /[a-z._]+@[a-z._]+[.]+(.*[a-z])/;
     return padrao.test(email);
 
 }
 
 function verificaSenha(dados){
-    const padrao1 = /(?=.*[-\#\$\.\%\&\*])(?=.*[A-Z])(?=.*\d).{8,15}/;
+    const padrao1 = /(?=.*[-\#\$\.\%\&\*\!])(?=.*[A-Z])(?=.*\d).{8,15}/;
     const padrao2 = /0+/;
     
     if (padrao1.test(dados) && !padrao2.test(dados)){
